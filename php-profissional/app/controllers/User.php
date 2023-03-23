@@ -33,7 +33,7 @@ class User
         'lastName' => 'required',
         'email' => 'email|unique:users',
         'password' => 'required|maxlen:12',
-      ]
+      ], persistInputs: true, checkCsrf:true,
     );
 
     if (!$validate) {
